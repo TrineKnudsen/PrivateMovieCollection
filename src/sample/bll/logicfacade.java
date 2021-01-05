@@ -1,7 +1,9 @@
 package sample.bll;
 
+import sample.be.Category;
 import sample.be.Movie;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface logicfacade {
@@ -35,6 +37,32 @@ public interface logicfacade {
      * @return The movie with the new rating.
      */
     Movie editRating(Movie movie);
+
+    /**
+     * Adds a category.
+     * @param name The name of the new category
+     * @return The new category.
+     */
+    Category addCategory(String name);
+
+    /**
+     * Deletes a category.
+     * @param category
+     */
+    void deleteCategory(Category category);
+
+    /**
+     * Gets a list of all categories
+     * @return A list of all categories.
+     */
+    List<Category> getAllCategories() throws SQLException;
+
+    /**
+     * Searches through the list of all movie titles and categories.
+     * @param query
+     * @return
+     */
+    List<Movie> searchMovies(String query);
 
 
 
