@@ -13,16 +13,18 @@ public class Movie {
     private static final String PROP_FILE = "data/config.properties";
 
     private int id;
-    private String title;
+    private String name;
+    private int year;
     private String category;
     private String path;
     private String duration;
     private double rating;
     private int lastView;
 
-    public Movie(int id, String title, String category, String path, String duration, double rating, int lastView) {
+    public Movie(int id, String name, int year, String category, String path, String duration, double rating, int lastView) {
         this.id = id;
-        this.title = title;
+        this.name = name;
+        this.year = year;
         this.category = category;
         this.path = path;
         this.duration = duration;
@@ -35,14 +37,24 @@ public class Movie {
         return id;
     }
 
-    public String getTitle()
+    public String getName()
     {
-        return title;
+        return name;
     }
 
-    public void setTitle(String title)
+    public void setName(String name)
     {
-        this.title = title;
+        this.name = name;
+    }
+
+    public int getYear()
+    {
+        return year;
+    }
+
+    public void setYear(int year)
+    {
+        this.year = year;
     }
 
     public String getCategory()
