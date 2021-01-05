@@ -1,14 +1,13 @@
 package sample.be;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
 public class Movie {
 
     /**
-     * This class is for getter and setter methods for the Movie object.
+     * This class is for getter and setter methods for instances of the Movie class.
      */
 
     private static final String PROP_FILE = "data/config.properties";

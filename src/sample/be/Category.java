@@ -3,7 +3,7 @@ package sample.be;
 public class Category {
 
     /**
-     * This class is for getter and setter methods for the category object.
+     * This class is for getter and setter methods for instances of the Category class.
      */
 
     private int id;
