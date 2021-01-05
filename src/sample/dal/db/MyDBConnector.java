@@ -14,9 +14,16 @@ public class MyDBConnector {
 
     private SQLServerDataSource dataSource;
 
+    /**
+     * In the PROP_FILE we have saved the login informations to the database.
+     */
     private static final String PROP_FILE = "src/sample/dal/database.settings.txt";
     private SQLServerDataSource ds;
 
+    /**
+     * The constructor for the class holds the connection to the database.
+     * @throws IOException
+     */
     public MyDBConnector() throws IOException {
         Properties databaseProperties = new Properties();
         databaseProperties.load(new FileInputStream(new File(PROP_FILE)));
@@ -33,10 +40,22 @@ public class MyDBConnector {
         ds.setPassword(password);
     }
 
+    /**
+     * We created a getConnection method so we can reuse the connection, so we dont have to create a new connection in
+     * all DAO classes.
+     * @return
+     * @throws SQLServerException
+     */
     public Connection getConnection() throws SQLServerException {
         return ds.getConnection();
     }
 
+    /**
+     * Just a tester to see if the connection is up and running.
+     * @param args
+     * @throws IOException
+     * @throws SQLException
+     */
     public static void main(String[]args) throws IOException, SQLException {
         MyDBConnector databaseConnector = new MyDBConnector();
         Connection connection = databaseConnector.getConnection();
