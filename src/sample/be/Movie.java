@@ -7,6 +7,10 @@ import java.util.Properties;
 
 public class Movie {
 
+    /**
+     * This class is for getter and setter methods for the Movie object.
+     */
+
     private static final String PROP_FILE = "data/config.properties";
 
     private int id;
