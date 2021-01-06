@@ -126,7 +126,7 @@ public class DalController implements dalInterface {
 
     @Override
     public List<Movie> getCatMovies(int id) throws SQLException {
-        return catmovierepo.getallCatmovie();
+        return catmovierepo.getAllCatmovie(id);
     }
 
 }

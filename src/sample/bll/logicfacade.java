@@ -64,6 +64,12 @@ public interface logicfacade {
      */
     List<Movie> searchMovies(String query);
 
+    /**
+     * Gets a list of all songs in a spesific category orderes by id.
+     * @param id
+     * @return
+     */
+    List<Movie> getAllCatMovie(int id);
 
 
 }

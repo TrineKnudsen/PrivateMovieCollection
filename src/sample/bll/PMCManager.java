@@ -104,4 +104,16 @@ public class PMCManager implements logicfacade {
     public List<Movie> searchMovies(String query) {
         return null;
     }
+
+    /**
+     * Gets a list of all songs in a spesific category orderes by id.
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public List<Movie> getAllCatMovie(int id) {
+        List<Movie> allCatMovies = getAllCatMovie(id);
+        return allCatMovies;
+    }
 }
