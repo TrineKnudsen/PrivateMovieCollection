@@ -70,4 +70,10 @@ public interface dalInterface {
      * @param movie The movie with the updated or added rating.
      */
     void editRating(Movie movie);
+
+    /**
+     * Gets a list of all movies in choosen category from the database.
+     * @return
+     */
+    List<Movie> getCatMovies(int id) throws SQLException;
 }

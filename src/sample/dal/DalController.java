@@ -3,6 +3,7 @@ package sample.dal;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import sample.be.Category;
 import sample.be.Movie;
+import sample.dal.db.CatMovDAO;
 import sample.dal.db.CategoryDAO;
 import sample.dal.db.MovieDAO;
 
@@ -14,10 +15,12 @@ public class DalController implements dalInterface {
 
     private CategoryDAO catrepo;
     private MovieDAO movierepo;
+    private CatMovDAO catmovierepo;
 
     public DalController() throws IOException, SQLServerException {
         movierepo = new MovieDAO();
         catrepo = new CategoryDAO();
+        catmovierepo = new CatMovDAO();
     }
 
     /**
@@ -120,4 +123,10 @@ public class DalController implements dalInterface {
     public void editRating(Movie movie) {
 
     }
+
+    @Override
+    public List<Movie> getCatMovies(int id) throws SQLException {
+        return catmovierepo.getallCatmovie();
+    }
+
 }
