@@ -4,6 +4,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
 import sample.be.Category;
 import sample.be.Movie;
 import sample.dal.db.CategoryDAO;
+import sample.dal.db.MovieDAO;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -12,8 +13,10 @@ import java.util.List;
 public class DalController implements dalInterface {
 
     private CategoryDAO catrepo;
+    private MovieDAO movierepo;
 
     public DalController() throws IOException, SQLServerException {
+        movierepo = new MovieDAO();
         catrepo = new CategoryDAO();
     }
 
@@ -91,8 +94,10 @@ public class DalController implements dalInterface {
      * @return A list of movies.
      */
     @Override
-    public List<Movie> getAllMovies() {
-        return null;
+    public List<Movie> getAllMovies() throws SQLException {
+        List<Movie> allMovies;
+        allMovies = movierepo.getMovies();
+        return allMovies;
     }
 
     /**

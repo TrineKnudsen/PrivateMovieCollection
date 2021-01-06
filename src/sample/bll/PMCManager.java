@@ -23,8 +23,8 @@ public class PMCManager implements logicfacade {
      * @return a list of songs.
      */
     @Override
-    public List<Movie> getAllMovies() {
-        return null;
+    public List<Movie> getAllMovies() throws SQLException {
+        return dalController.getAllMovies();
     }
 
     /**

@@ -55,7 +55,7 @@ public interface dalInterface {
      * Gets a list of all the movies from the database.
      * @return A list of movies.
      */
-    List<Movie> getAllMovies();
+    List<Movie> getAllMovies() throws SQLException;
 
     /**
      * Gets a movie with the given ID.

@@ -12,7 +12,7 @@ public interface logicfacade {
      * Gets a list of all songs.
      * @return a list of songs.
      */
-    List<Movie> getAllMovies();
+    List<Movie> getAllMovies() throws SQLException;
 
     /**
      * Adds a new movie.
