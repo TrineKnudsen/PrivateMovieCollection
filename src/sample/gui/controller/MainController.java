@@ -1,17 +1,23 @@
-package sample.gui.controller;
+package sample.gui.Controller;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import sample.be.Category;
 import sample.be.Movie;
 import sample.gui.Model.CategoryModel;
 import sample.gui.Model.MovieModel;
 
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -67,5 +73,13 @@ public class MainController implements Initializable {
             catMovList.get(x).setId(catMovList.size() - x);
             lstCatMov.getItems().add(catMovList.get(10));
         }
+    }
+
+    public void clickAddMovie(ActionEvent event) throws IOException {
+        Parent MainParent = FXMLLoader.load(getClass().getResource("/sample/gui/View/AddMovie.fxml"));
+        Scene MainScene = new Scene(MainParent);
+        Stage addMovieStage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        addMovieStage.setScene(MainScene);
+        addMovieStage.show();
     }
 }
