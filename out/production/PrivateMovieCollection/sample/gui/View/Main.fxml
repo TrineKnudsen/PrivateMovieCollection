@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.gui.controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.gui.Controller.MainController">
 
    <children>
       <Text fill="#f508e1" layoutX="200.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MOVIE">
@@ -24,19 +24,11 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-<<<<<<< Updated upstream
-      <TableView layoutX="200.0" layoutY="111.0" prefHeight="155.0" prefWidth="371.0">
-        <columns>
-          <TableColumn prefWidth="210.00001525878906" style="-fx-background-color: #a6a0a0;" text="Name" />
-          <TableColumn prefWidth="86.6666259765625" style="-fx-background-color: #a6a0a0;" text="Duration" />
-            <TableColumn prefWidth="73.33334350585938" style="-fx-background-color: #a6a0a0;" text="Rating" />
-=======
       <TableView fx:id="lstCatMov" layoutX="200.0" layoutY="111.0" prefHeight="155.0" prefWidth="371.0">
         <columns>
           <TableColumn fx:id="nameSongColumn" prefWidth="210.00001525878906" style="-fx-background-color: #a6a0a0;" text="Name" />
           <TableColumn fx:id="durationcolumn" prefWidth="86.6666259765625" style="-fx-background-color: #a6a0a0;" text="Duration" />
             <TableColumn fx:id="ratingcolumn" prefWidth="73.33334350585938" style="-fx-background-color: #a6a0a0;" text="Rating" />
->>>>>>> Stashed changes
         </columns>
       </TableView>
       <Button layoutX="184.0" layoutY="275.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="109.0" style="-fx-background-color: #20120F;" text="ADD MOVIE" textAlignment="RIGHT" textFill="#0bee34">

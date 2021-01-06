@@ -1,4 +1,4 @@
-package sample.gui.controller;
+package sample.gui.Controller;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
